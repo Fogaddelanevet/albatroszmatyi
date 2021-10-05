@@ -1,0 +1,63 @@
+#balkep
+{
+
+width: 200px;
+position: relative;
+top:0px;
+border-style: solid;
+border-width: 1px;
+border-color:#1d1d4e;
+margin-right: 10px;
+box-shadow: 2px 2px 4px;
+}
+.fejsor
+{
+
+text-align: center;
+
+
+}
+#jobbkep
+{
+   width:350px;
+    
+  
+    border-style: solid;
+    border-width: 1px;
+    border-color:#1d1d4e;
+    box-shadow: 2px 2px 4px;
+    top:-10px;
+    margin-right:50%;
+}
+body
+{
+
+    color:#1d1d4e;
+    background-color: #e7e7ff;
+}
+.forras
+{
+
+    text-align: center;
+}
+td
+{
+ border:dotted 1px;
+ text-align:right;
+ padding-right:5px;
+ color:black;
+
+}
+.fejsor
+{
+ background-color:grey;
+ color:white;
+
+}
+.masodik
+{
+    text-align: left;
+    font-style: italic;
+    color:black;
+    padding-left:5px;
+}
