@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    
+    <title>Document</title>
+    <script>
+
+function popMenu(t){
+var townlist= [['Budapest',311],['mucsarocsoge',30000],['taktaharkány',3],["hold",384400]];/*tömb létrehozása*/ 
+
+    if(t.options.length == 1) /*hogyha a tömb elemei üresek*/
+{
+    for(var i=0;i<townlist.length;i++) { /*tömb elemein végigléptetés,option feltöltése*/ 
+    
+        var towns =townlist[i];/*uj valtozo tömb elemeivel való feltöltése*/
+
+        var el =document.createElement("option");/* uj valtozo létrehozása,annak az "option"-nal való feltöltése*/
+        el.textContent= towns[0]; /*változo 1diemnzoós tömb,első elemeivel való feltöltése*/
+        el.value=towns[1];/*változo 1diemnzoós tömb,második elemeivel való feltöltése*/
+        t.appendChild(el);
+    }
+    
+}
+
+
+
+}
+function feeCalculator(d,w)
+{
+    var weightfee= w*100; /*ujvaltozo létrehozása,suly kiszamitasa*/
+    var distance = d*150;/*ujvaltozo létrehozása,távolság kiszamitasa*/
+    var total =weightfee+distance+2000;/*ujvaltozo létrehozása,összérték kiszamitasa*/
+
+    alert(total);/*összérték kiiratása*/
+}
+
+
+    </script>
+</head>
+<body>
+    <form name="feecalculator">
+    <label >városnév</label>
+    <select name="" id="town" name="town" onclick="popMenu(document.feecalculator.town)">
+    <option value="">válassz várost</option>
+    </select>
+
+<label>suly</label>
+<input type="number" name="weight" id="weight">
+<input type="button" value="számol" onclick="feeCalculator(document.feecalculator.town.value, document.feecalculator.weight.value)">
+</form>
+</body>
+</html>

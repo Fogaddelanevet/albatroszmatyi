@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+
+    <!-- alapdíj:2000ft 
+    súly:100ft/kg 
+    km díj:150/km --> 
+</head> 
+
+<body> 
+    <form name="lap"> 
+        <input type="number" name="suly"> 
+        <select name="távolság"  id=""> 
+            <script> 
+                var varosok = [['Balmazújváros',28],['Hajdúböszrmény',19],['Hajdúnánás',46],['Hajdúdorog',36],['Hajdúvíd',30]]; /*tomb létrehozása*/
+                for (let i = 0; i < varosok.length; i++) { /*tömbön végig léptetés*/
+                    document.write("<option value="+varosok[i][1]+">"+varosok[i][0]+"</option>"); /*tömb elemeinek opcióba való rendelése*/
+                } 
+            </script> 
+        </select> 
+        <input type="button" value="Ok" onclick="szamolas(document.lap.suly.value,document.lap.távolság.value)"> 
+    </form> 
+
+    <script> 
+        function szamolas(suly,tavolsag){ 
+            const ALAPDÍJ = 2000; 
+            /*alapdij fixalasa*/
+            const SÚLYDÍJ = 100; 
+            /*sulydij fixalasa*/
+            const TÁVDÍJ = 150;
+            /*tavdij fixalasa*/ 
+            var b = parseInt(suly); 
+
+            var c = parseInt(tavolsag); 
+            /*suly,tavolsag int-é convertálása*/
+            var eredm = ALAPDÍJ+b*SÚLYDÍJ+c*TÁVDÍJ; 
+            /*eredmény kiszámítása*/
+            alert("Fizetendő: " +eredm); /*eredmeny kiiratasa*/
+        } 
+    </script> 
+</body> 
+
+</html> 
